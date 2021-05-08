@@ -32,3 +32,44 @@ body {
   align-items: center;
   margin-bottom: 20px;
 }
+
+#map-img {
+  width: 50%;
+}
+
+#map-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+#drawing-tools {
+  display: flex;
+  flex-direction: column;
+}
+
+.agent-container {
+  display: flex;
+  list-style: none;
+}
+
+.agent-image {
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  border: 5px solid green;
+}
+
+#ability-container {
+  display: flex;
+  list-style: none;
+}
+
+.ability-image {
+  height: 64px;
+  width: 64px;
+  background-color: black;
+  border-radius: 50%;
+  border: 5px solid green;
+  padding: 8px;
+}

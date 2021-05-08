@@ -1,12 +1,14 @@
 import './scss/App.scss';
 import Header from './components/Header';
 import MapList from './components/MapList';
+import Agents from './components/Agents';
 
 function App() {
   return (
     <div className='App'>
       <Header />
       <MapList />
+      <Agents />
     </div>
   );
 }

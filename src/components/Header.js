@@ -11,12 +11,14 @@ const Header = ({ title }) => {
         <a
           href='https://github.com/Diaresta/Valorant-Map-Strats'
           target='_blank'
+          rel='noreferrer'
         >
           Github
         </a>
         <a
           href='https://github.com/Diaresta/Valorant-Map-Strats'
           target='_blank'
+          rel='noreferrer'
         >
           Home
         </a>
