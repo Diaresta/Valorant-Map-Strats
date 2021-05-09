@@ -13,6 +13,15 @@
   color: red;
 }
 
+a {
+  text-decoration: none;
+  color: red;
+}
+
+a:hover {
+  color: darkred;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

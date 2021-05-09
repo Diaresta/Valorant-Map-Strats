@@ -13,7 +13,7 @@ const Header = ({ title }) => {
           target='_blank'
           rel='noreferrer'
         >
-          Github
+          <i className='fab fa-github fa-lg' />
         </a>
         <a
           href='https://github.com/Diaresta/Valorant-Map-Strats'
