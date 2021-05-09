@@ -57,6 +57,11 @@ body {
 //---------------------------------//
 
 //---------- Agent.js file ----------//
+#ability-container {
+  display: flex;
+  list-style: none;
+}
+
 .agent-container {
   display: flex;
   list-style: none;
@@ -67,11 +72,6 @@ body {
   width: 64px;
   border-radius: 50%;
   border: 5px solid green;
-}
-
-#ability-container {
-  display: flex;
-  list-style: none;
 }
 
 .ability-image {

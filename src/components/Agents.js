@@ -162,18 +162,23 @@ const Agents = () => {
               alt='ability 4'
             />
           </li>
-          <li>
-            <img
-              src='/images/Agent-Images/Astra/Abil-4.png'
-              className='ability-image'
-              alt='ability 5'
-            />
-          </li>
         </ul>
 
-        <ul id='misc-container'>
-          <li>bomb</li>
-          <li>ultimate orb</li>
+        <ul id='ability-container'>
+          <li>
+            <img
+              src='/images/Misc-Images/Spike.png'
+              className='ability-image'
+              alt='Spike'
+            />
+          </li>
+          <li>
+            <img
+              src='/images/Misc-Images/Ultimate-orb.png'
+              className='ability-image'
+              alt='Ultimate Orb'
+            />
+          </li>
         </ul>
       </div>
     </div>
