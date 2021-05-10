@@ -8,12 +8,14 @@ const Agents = () => {
   };
 
   return (
-    <div>
+    <div id='agent-skill-container'>
       <div>
-        <button id='attack-btn' onClick={attackDefend}>
+        <button id='attack-btn' className='btn map-btn' onClick={attackDefend}>
           Attack
         </button>
-        <button id='defend-btn'>Defend</button>
+        <button id='defend-btn' className='btn map-btn'>
+          Defend
+        </button>
       </div>
 
       <div>
