@@ -1,4 +1,4 @@
-import './scss/App.scss';
+import './static/css/App.css';
 import Header from './components/Header';
 import MapList from './components/MapList';
 import Agents from './components/Agents';

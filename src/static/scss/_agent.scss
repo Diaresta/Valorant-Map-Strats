@@ -1,0 +1,33 @@
+@import 'config';
+
+// #agent-skill-container {
+//   width: 25%;
+// }
+
+#ability-container {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+.agent-container {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+.agent-image {
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  border: 5px solid green;
+}
+
+.ability-image {
+  height: 64px;
+  width: 64px;
+  background-color: black;
+  border-radius: 50%;
+  border: 5px solid green;
+  padding: 8px;
+}

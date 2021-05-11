@@ -1,0 +1,102 @@
+@import 'config';
+
+// #left-container {
+//   display: flex;
+// }
+
+#map-container {
+  // width: 50%;
+}
+
+#map-img {
+  width: 50%;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+#map-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+#drawing-tools {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  color: $text-color;
+
+  button {
+    margin: auto;
+  }
+
+  button:hover {
+    background-color: $hover-color;
+    color: $text-color;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  .dt-2 {
+    color: #e1b826;
+  }
+
+  .dt-3 {
+    color: #f2aab2;
+  }
+
+  .dt-4 {
+    color: red;
+  }
+}
+
+.btn {
+  font-family: 'DINW05';
+  font-size: 0.75rem;
+  font-weight: bold;
+  width: 55px;
+  background-color: $btn-color;
+  color: $text-color-blk;
+  border-style: none;
+  border-radius: 5%;
+  margin: 0 5px;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.map-btn {
+  display: inline-block;
+  position: relative;
+  transition: color 0.25s ease;
+  z-index: 1;
+}
+
+.map-btn:hover,
+.map-btn:focus {
+  color: $text-color;
+}
+
+.map-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: $text-color-blk;
+  z-index: -1;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.map-btn:hover::before,
+.map-btn:focus::before {
+  transform: scaleX(1);
+  border: 1px solid $text-color;
+  border-radius: 5%;
+}

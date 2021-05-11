@@ -1,16 +1,44 @@
 @font-face {
   font-family: 'VALORANT';
-  src: url("/fonts/Valorant_Font.ttf") format("truetype");
+  src: url("/src/fonts/Valorant_Font.ttf") format("truetype");
 }
 
 @font-face {
   font-family: 'DINW05';
-  src: url("/fonts/DINW05.ttf") format("truetype");
+  src: url("/src/fonts/DINW05.ttf") format("truetype");
 }
 
 .App {
   text-align: center;
   background-color: black;
+}
+
+#ability-container {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+.agent-container {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+.agent-image {
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  border: 5px solid green;
+}
+
+.ability-image {
+  height: 64px;
+  width: 64px;
+  background-color: black;
+  border-radius: 50%;
+  border: 5px solid green;
+  padding: 8px;
 }
 
 a {
@@ -161,32 +189,4 @@ body {
   transform: scaleX(1);
   border: 1px solid #f9f9f9;
   border-radius: 5%;
-}
-
-#ability-container {
-  display: flex;
-  list-style: none;
-  justify-content: center;
-}
-
-.agent-container {
-  display: flex;
-  list-style: none;
-  justify-content: center;
-}
-
-.agent-image {
-  height: 64px;
-  width: 64px;
-  border-radius: 50%;
-  border: 5px solid green;
-}
-
-.ability-image {
-  height: 64px;
-  width: 64px;
-  background-color: black;
-  border-radius: 50%;
-  border: 5px solid green;
-  padding: 8px;
 }

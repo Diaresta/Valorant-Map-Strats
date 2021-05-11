@@ -1,0 +1,34 @@
+@import 'config';
+
+@font-face {
+  font-family: 'VALORANT';
+  src: url('/src/fonts/Valorant_Font.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'DINW05';
+  src: url('/src/fonts/DINW05.ttf') format('truetype');
+}
+
+//---------- App.js file ----------//
+.App {
+  text-align: center;
+  background-color: black;
+  // background-image: url('https://playvalorant.com/assets/images/background-sprite.png');
+}
+
+// .App-header {
+//   background-color: black;
+//   min-height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   font-size: calc(10px + 2vmin);
+// }
+//---------------------------------//
+
+@import 'agent';
+@import 'header';
+@import 'index';
+@import 'mapList';

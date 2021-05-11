@@ -1,0 +1,40 @@
+@import 'config';
+
+a {
+  text-decoration: none;
+  color: $btn-color;
+}
+
+a:hover {
+  color: $hover-color;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  margin-bottom: 20px;
+  color: $text-color;
+  background-color: $text-color-blk;
+  // border-bottom: 2px solid $btn-color;
+
+  h1 {
+    font-family: 'VALORANT';
+    color: $btn-color;
+    padding-top: 7px;
+  }
+
+  h1:hover {
+    color: $hover-color;
+  }
+
+  h3 {
+    margin: auto;
+    padding-left: 15px;
+  }
+}
+
+#header-left {
+  display: flex;
+}
