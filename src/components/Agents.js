@@ -10,15 +10,15 @@ const Agents = () => {
   return (
     <div id='agent-skill-container'>
       <div>
-        <button id='attack-btn' className='btn map-btn' onClick={attackDefend}>
+        <button id='attack-btn' className='btn draw-btn' onClick={attackDefend}>
           Attack
         </button>
-        <button id='defend-btn' className='btn map-btn'>
+        <button id='defend-btn' className='btn draw-btn'>
           Defend
         </button>
       </div>
 
-      <div>
+      <div id='agent-div'>
         <ul className='agent-container'>
           <li>
             <img
@@ -182,6 +182,7 @@ const Agents = () => {
             />
           </li>
         </ul>
+        <button className='btn draw-btn border-btn'>Remove Border</button>
       </div>
     </div>
   );

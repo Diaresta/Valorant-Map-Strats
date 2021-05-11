@@ -17,6 +17,20 @@
   // background-image: url('https://playvalorant.com/assets/images/background-sprite.png');
 }
 
+#app-container {
+  display: flex;
+}
+
+#map-comp-container {
+  width: 100%;
+}
+
+#agent-comp-container {
+  display: flex;
+  align-items: center;
+  width: 30%;
+}
+
 // .App-header {
 //   background-color: black;
 //   min-height: 100vh;

@@ -22,14 +22,6 @@ const MapList = () => {
       </ul>
 
       <div id='left-container'>
-        <div id='map-container'>
-          <img
-            src='/images/Map-Images/Ascent-1.png'
-            id='map-img'
-            alt='Map Placeholder'
-          />
-        </div>
-
         <div id='drawing-tools'>
           <i className='far fa-hand-pointer fa-3x dt-1' alt='Pointer' />
           <i className='fas fa-pencil-alt fa-3x dt-2' alt='Pencil' />
@@ -48,6 +40,14 @@ const MapList = () => {
             </ul>
           </button>
         </div> */}
+        </div>
+
+        <div id='map-container'>
+          <img
+            src='/images/Map-Images/Ascent-1.png'
+            id='map-img'
+            alt='Map Placeholder'
+          />
         </div>
       </div>
     </div>

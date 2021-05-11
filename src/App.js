@@ -7,8 +7,14 @@ function App() {
   return (
     <div className='App'>
       <Header />
-      <MapList />
-      <Agents />
+      <div id='app-container'>
+        <div id='map-comp-container'>
+          <MapList />
+        </div>
+        <div id='agent-comp-container'>
+          <Agents />
+        </div>
+      </div>
     </div>
   );
 }

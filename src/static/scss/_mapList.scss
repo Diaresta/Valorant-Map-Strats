@@ -1,15 +1,20 @@
 @import 'config';
 
-// #left-container {
-//   display: flex;
-// }
+#map-list-container {
+}
+
+#left-container {
+  display: flex;
+  justify-content: flex-end;
+}
 
 #map-container {
-  // width: 50%;
+  width: 65%;
+  // margin: auto;
 }
 
 #map-img {
-  width: 50%;
+  width: 100%;
   user-drag: none;
   user-select: none;
   -moz-user-select: none;
@@ -25,19 +30,15 @@
 }
 
 #drawing-tools {
-  width: 25%;
+  width: 10%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   color: $text-color;
 
   button {
-    margin: auto;
-  }
-
-  button:hover {
-    background-color: $hover-color;
-    color: $text-color;
-    transition: background-color 0.25s ease, color 0.25s ease;
+    // margin: auto;
+    margin: 5px auto;
   }
 
   .dt-2 {
@@ -57,7 +58,7 @@
   font-family: 'DINW05';
   font-size: 0.75rem;
   font-weight: bold;
-  width: 55px;
+  width: 60px;
   background-color: $btn-color;
   color: $text-color-blk;
   border-style: none;
@@ -99,4 +100,10 @@
   transform: scaleX(1);
   border: 1px solid $text-color;
   border-radius: 5%;
+}
+
+.draw-btn:hover {
+  background-color: $hover-color;
+  color: $text-color;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }

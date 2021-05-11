@@ -1,13 +1,29 @@
 @import 'config';
 
-// #agent-skill-container {
-//   width: 25%;
-// }
+#agent-skill-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50%;
+
+  div {
+    margin: 5px 0;
+  }
+
+  img {
+    margin: 5px;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+}
 
 #ability-container {
   display: flex;
   list-style: none;
   justify-content: center;
+  border-top: 1px solid $text-color;
 }
 
 .agent-container {
@@ -17,17 +33,23 @@
 }
 
 .agent-image {
-  height: 64px;
-  width: 64px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
   border: 5px solid green;
+  cursor: pointer;
 }
 
 .ability-image {
-  height: 64px;
-  width: 64px;
+  height: 50px;
+  width: 50px;
   background-color: black;
   border-radius: 50%;
   border: 5px solid green;
   padding: 8px;
+  cursor: pointer;
+}
+
+.border-btn {
+  width: 50% !important;
 }

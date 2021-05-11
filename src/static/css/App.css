@@ -13,10 +13,44 @@
   background-color: black;
 }
 
+#app-container {
+  display: flex;
+}
+
+#map-comp-container {
+  width: 100%;
+}
+
+#agent-comp-container {
+  display: flex;
+  align-items: center;
+  width: 30%;
+}
+
+#agent-skill-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50%;
+}
+
+#agent-skill-container div {
+  margin: 5px 0;
+}
+
+#agent-skill-container img {
+  margin: 5px;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
 #ability-container {
   display: flex;
   list-style: none;
   justify-content: center;
+  border-top: 1px solid #f9f9f9;
 }
 
 .agent-container {
@@ -26,19 +60,25 @@
 }
 
 .agent-image {
-  height: 64px;
-  width: 64px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
   border: 5px solid green;
+  cursor: pointer;
 }
 
 .ability-image {
-  height: 64px;
-  width: 64px;
+  height: 50px;
+  width: 50px;
   background-color: black;
   border-radius: 50%;
   border: 5px solid green;
   padding: 8px;
+  cursor: pointer;
+}
+
+.border-btn {
+  width: 50% !important;
 }
 
 a {
@@ -99,8 +139,17 @@ body {
   margin-bottom: 20px;
 }
 
+#left-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#map-container {
+  width: 65%;
+}
+
 #map-img {
-  width: 50%;
+  width: 100%;
   user-drag: none;
   user-select: none;
   -moz-user-select: none;
@@ -116,20 +165,15 @@ body {
 }
 
 #drawing-tools {
-  width: 25%;
+  width: 10%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   color: #f9f9f9;
 }
 
 #drawing-tools button {
-  margin: auto;
-}
-
-#drawing-tools button:hover {
-  background-color: #e30012;
-  color: #f9f9f9;
-  transition: background-color 0.25s ease, color 0.25s ease;
+  margin: 5px auto;
 }
 
 #drawing-tools .dt-2 {
@@ -148,7 +192,7 @@ body {
   font-family: 'DINW05';
   font-size: 0.75rem;
   font-weight: bold;
-  width: 55px;
+  width: 60px;
   background-color: #ff4655;
   color: #0f1923;
   border-style: none;
@@ -189,4 +233,10 @@ body {
   transform: scaleX(1);
   border: 1px solid #f9f9f9;
   border-radius: 5%;
+}
+
+.draw-btn:hover {
+  background-color: #e30012;
+  color: #f9f9f9;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
