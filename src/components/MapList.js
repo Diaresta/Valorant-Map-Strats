@@ -48,6 +48,7 @@ const MapList = () => {
             id='map-img'
             alt='Map Placeholder'
           />
+          <canvas />
         </div>
       </div>
     </div>
