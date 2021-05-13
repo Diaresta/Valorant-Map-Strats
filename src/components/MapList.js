@@ -1,6 +1,51 @@
 // import PropTypes from 'prop-types';
 
-const MapList = () => {
+import { useEffect, useState, useRef } from 'react';
+
+const MapList = (props) => {
+  const canvasRef = useRef(null);
+  const contextRef = useRef(null);
+  const [isDrawing, setIsDrawing] = useState(false);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    // below for higher density screens?
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    canvas.style.width = `${window.innerWidth}`;
+    canvas.style.height = `${window.innerHeight}`;
+
+    const context = canvas.getContext('2d');
+    context.scale(2, 2);
+    context.lineCap = 'round';
+    context.strokeStyle = 'white';
+    context.lineWidth = 5;
+
+    contextRef.current = context;
+  }, []);
+
+  const startDrawing = ({ nativeEvent }) => {
+    const { offsetX, offsetY } = nativeEvent;
+    contextRef.current.beginPath();
+    contextRef.current.moveTo(offsetX, offsetY);
+    setIsDrawing(true);
+  };
+
+  const endDrawing = () => {
+    contextRef.current.closePath();
+    setIsDrawing(false);
+  };
+
+  const draw = ({ nativeEvent }) => {
+    // can always change clause without negate
+    if (!isDrawing) {
+      return;
+    }
+    const { offsetX, offsetY } = nativeEvent;
+    contextRef.current.lineTo(offsetX, offsetY);
+    contextRef.current.stroke();
+  };
+
   return (
     <div id='map-list-container'>
       <ul id='map-list'>
@@ -29,6 +74,14 @@ const MapList = () => {
           <i className='fas fa-times fa-3x  dt-4' alt='Delete' />
           <button className='btn draw-btn'>Reset</button>
           <button className='btn draw-btn'>4px</button>
+          {/* <button className='btn draw-btn'>Color</button> */}
+          <div id='color-container'>
+            <input id='color' type='color' className='btn draw-btn' />
+            <label id='color-label' htmlFor='color'>
+              Color
+            </label>
+          </div>
+
           {/* ^^ Pencil thickness above */}
 
           {/* <div id='dropdown'>
@@ -48,7 +101,13 @@ const MapList = () => {
             id='map-img'
             alt='Map Placeholder'
           />
-          <canvas />
+          <canvas
+            {...props}
+            onMouseDown={startDrawing}
+            onMouseUp={endDrawing}
+            onMouseMove={draw}
+            ref={canvasRef}
+          />
         </div>
       </div>
     </div>

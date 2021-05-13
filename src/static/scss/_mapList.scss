@@ -49,7 +49,8 @@
   justify-content: center;
   color: $text-color;
 
-  button {
+  button,
+  input {
     // margin: auto;
     margin: 5px auto;
   }
@@ -64,6 +65,30 @@
 
   .dt-4 {
     color: red;
+  }
+}
+
+#color-container {
+  position: relative;
+  text-align: center;
+
+  label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'DINW05';
+    font-size: 0.75rem;
+    font-weight: bold;
+    width: 60px;
+    color: $text-color-blk;
+    cursor: pointer;
+  }
+}
+
+#color:hover {
+  label {
+    color: $text-color;
   }
 }
 

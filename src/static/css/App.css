@@ -183,7 +183,8 @@ body {
   color: #f9f9f9;
 }
 
-#drawing-tools button {
+#drawing-tools button,
+#drawing-tools input {
   margin: 5px auto;
 }
 
@@ -197,6 +198,28 @@ body {
 
 #drawing-tools .dt-4 {
   color: red;
+}
+
+#color-container {
+  position: relative;
+  text-align: center;
+}
+
+#color-container label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'DINW05';
+  font-size: 0.75rem;
+  font-weight: bold;
+  width: 60px;
+  color: #0f1923;
+  cursor: pointer;
+}
+
+#color:hover label {
+  color: #f9f9f9;
 }
 
 .btn {
