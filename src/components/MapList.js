@@ -9,11 +9,10 @@ const MapList = (props) => {
 
   useEffect(() => {
     const canvas = canvasRef.current;
+
     // below for higher density screens?
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    canvas.style.width = `${window.innerWidth}`;
-    canvas.style.height = `${window.innerHeight}`;
+    canvas.width = canvas.offsetWidth * 2;
+    canvas.height = canvas.offsetHeight * 2;
 
     const context = canvas.getContext('2d');
     context.scale(2, 2);
@@ -24,14 +23,14 @@ const MapList = (props) => {
     contextRef.current = context;
   }, []);
 
-  const startDrawing = ({ nativeEvent }) => {
+  const startDraw = ({ nativeEvent }) => {
     const { offsetX, offsetY } = nativeEvent;
     contextRef.current.beginPath();
     contextRef.current.moveTo(offsetX, offsetY);
     setIsDrawing(true);
   };
 
-  const endDrawing = () => {
+  const endDraw = () => {
     contextRef.current.closePath();
     setIsDrawing(false);
   };
@@ -103,8 +102,8 @@ const MapList = (props) => {
           />
           <canvas
             {...props}
-            onMouseDown={startDrawing}
-            onMouseUp={endDrawing}
+            onMouseDown={startDraw}
+            onMouseUp={endDraw}
             onMouseMove={draw}
             ref={canvasRef}
           />
