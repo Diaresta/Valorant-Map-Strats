@@ -56,7 +56,7 @@ const MapList = (props) => {
     split: '/images/Map-Images/Split-1.png',
   };
 
-  const [map, setMap] = useState(maps.bind);
+  const [map, setMap] = useState(maps.ascent);
 
   const onClickMap = (e) => {
     if (e.target.innerHTML === 'Ascent') {

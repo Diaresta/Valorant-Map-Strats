@@ -1,7 +1,9 @@
-const Abilities = ({ agentInfo }) => {
+import Agents from './Agents';
+
+const Abilities = ({ agentInfo, start }) => {
   return (
     <>
-      {agentInfo.map((agent) => (
+      {agentInfo.slice(start, start + 1).map((agent) => (
         <div>
           <img
             key='ability0'
