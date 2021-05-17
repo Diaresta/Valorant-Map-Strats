@@ -1,52 +1,51 @@
 // import PropTypes from 'prop-types';
 import { useEffect, useState, useRef } from 'react';
 import MapButton from './MapButton';
+import Canvas from './Canvas';
 
 const MapList = (props) => {
-  const canvasRef = useRef(null);
-  const contextRef = useRef(null);
-  const [isDrawing, setIsDrawing] = useState(false);
+  // const canvasRef = useRef(null);
+  // const contextRef = useRef(null);
+  // const [isDrawing, setIsDrawing] = useState(false);
 
-  useEffect(() => {
-    const canvas = canvasRef.current;
+  // useEffect(() => {
+  //   const canvas = canvasRef.current;
 
-    // below for higher density screens?
-    canvas.width = canvas.offsetWidth * 2;
-    canvas.height = canvas.offsetHeight * 2;
+  //   // below for higher density screens?
+  //   canvas.width = canvas.offsetWidth * 2;
+  //   canvas.height = canvas.offsetHeight * 2;
 
-    const context = canvas.getContext('2d');
-    context.scale(2, 2);
-    context.lineCap = 'round';
-    context.strokeStyle = 'white';
-    context.lineWidth = 5;
+  //   const context = canvas.getContext('2d');
+  //   context.scale(2, 2);
+  //   context.lineCap = 'round';
+  //   context.strokeStyle = 'white';
+  //   context.lineWidth = 5;
 
-    contextRef.current = context;
-  }, []);
+  //   contextRef.current = context;
+  // }, []);
 
-  const startDraw = ({ nativeEvent }) => {
-    const { offsetX, offsetY } = nativeEvent;
-    contextRef.current.beginPath();
-    contextRef.current.moveTo(offsetX, offsetY);
-    setIsDrawing(true);
-  };
+  // const startDraw = ({ nativeEvent }) => {
+  //   const { offsetX, offsetY } = nativeEvent;
+  //   contextRef.current.beginPath();
+  //   contextRef.current.moveTo(offsetX, offsetY);
+  //   setIsDrawing(true);
+  // };
 
-  const endDraw = () => {
-    contextRef.current.closePath();
-    setIsDrawing(false);
-  };
+  // const endDraw = () => {
+  //   contextRef.current.closePath();
+  //   setIsDrawing(false);
+  // };
 
-  const draw = ({ nativeEvent }) => {
-    // can always change clause without negate
-    if (!isDrawing) {
-      return;
-    }
-    const { offsetX, offsetY } = nativeEvent;
-    contextRef.current.lineTo(offsetX, offsetY);
-    contextRef.current.stroke();
-  };
+  // const draw = ({ nativeEvent }) => {
+  //   // can always change clause without negate
+  //   if (!isDrawing) {
+  //     return;
+  //   }
+  //   const { offsetX, offsetY } = nativeEvent;
+  //   contextRef.current.lineTo(offsetX, offsetY);
+  //   contextRef.current.stroke();
+  // };
 
-  // const MapButtonRef = useRef(null);
-  // const map = MapButtonRef.current;
   const mapImageRef = useRef(null);
 
   const maps = {
@@ -57,25 +56,39 @@ const MapList = (props) => {
     split: '/images/Map-Images/Split-1.png',
   };
 
-  const onClick = () => {};
+  const [map, setMap] = useState(maps.bind);
+
+  const onClickMap = (e) => {
+    if (e.target.innerHTML === 'Ascent') {
+      setMap(maps.ascent);
+    } else if (e.target.innerHTML === 'Bind') {
+      setMap(maps.bind);
+    } else if (e.target.innerHTML === 'Haven') {
+      setMap(maps.haven);
+    } else if (e.target.innerHTML === 'Icebox') {
+      setMap(maps.icebox);
+    } else if (e.target.innerHTML === 'Split') {
+      setMap(maps.split);
+    }
+  };
 
   return (
     <div id='map-list-container'>
       <ul id='map-list'>
         <li className='map-title'>
-          <MapButton text='Ascent' onClick={onClick} />
+          <MapButton text='Ascent' onClick={onClickMap} />
         </li>
         <li className='map-title'>
-          <MapButton text='Bind' onClick={onClick} />
+          <MapButton text='Bind' onClick={onClickMap} />
         </li>
         <li className='map-title'>
-          <MapButton text='Haven' onClick={onClick} />
+          <MapButton text='Haven' onClick={onClickMap} />
         </li>
         <li className='map-title'>
-          <MapButton text='Icebox' onClick={onClick} />
+          <MapButton text='Icebox' onClick={onClickMap} />
         </li>
         <li className='map-title'>
-          <MapButton text='Split' onClick={onClick} />
+          <MapButton text='Split' onClick={onClickMap} />
         </li>
       </ul>
 
@@ -109,19 +122,15 @@ const MapList = (props) => {
         </div>
 
         <div id='map-container'>
-          <img
-            src={maps.ascent}
-            id='map-img'
-            alt='Map Placeholder'
-            ref={mapImageRef}
-          />
-          <canvas
-            {...props}
+          <img src={map} id='map-img' alt='Map Placeholder' ref={mapImageRef} />
+          {/* <canvas
+            // {...props}
             onMouseDown={startDraw}
             onMouseUp={endDraw}
             onMouseMove={draw}
             ref={canvasRef}
-          />
+          /> */}
+          <Canvas />
         </div>
       </div>
     </div>
