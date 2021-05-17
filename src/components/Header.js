@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 
-const Header = ({ title }) => {
+const Header = ({ title, blurb }) => {
   return (
     <header>
       <div id='header-left'>
         <a href='/'>
           <h1 alt='Title and Home Button'>{title}</h1>
         </a>
-        <h3>Valorant Strat Planner</h3>
+        <h3>{blurb}</h3>
       </div>
       <div id='header-right'>
         <a
@@ -15,16 +15,16 @@ const Header = ({ title }) => {
           target='_blank'
           rel='noreferrer'
         >
-          <i className='fab fa-github fa-lg' />
+          <i className='fab fa-github fa-lg' alt='Github Link' />
         </a>
       </div>
-      {/* <img src={process.env.PUBLIC_URL + '/shine-logo.png'} alt='reee' /> */}
     </header>
   );
 };
 
 Header.defaultProps = {
   title: 'Vandal',
+  blurb: 'Valorant Strat Planner',
 };
 
 Header.propTypes = {

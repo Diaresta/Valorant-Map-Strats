@@ -121,4 +121,14 @@ const agentInfo = [
   },
 ];
 
-export default agentInfo;
+const AgentImage = () => {
+  return (
+    <>
+      {agentInfo.map((agent) => (
+        <img src={agent.img} className='agent-image' alt={agent.name}></img>
+      ))}
+    </>
+  );
+};
+
+export default AgentImage;

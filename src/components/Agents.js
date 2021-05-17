@@ -1,3 +1,5 @@
+import AgentImage from './AgentImage';
+
 const Agents = () => {
   const attackDefend = () => {
     console.log('reee');
@@ -18,7 +20,60 @@ const Agents = () => {
         </button>
       </div>
 
-      <div id='agent-div'>
+      <div id='agent-div-2'>
+        <AgentImage />
+
+        <ul id='ability-container'>
+          <li>
+            <img
+              src='/images/Agent-Images/Astra/Abil-0.png'
+              className='ability-image'
+              alt='ability 1'
+            />
+          </li>
+          <li>
+            <img
+              src='/images/Agent-Images/Astra/Abil-1.png'
+              className='ability-image'
+              alt='ability 2'
+            />
+          </li>
+          <li>
+            <img
+              src='/images/Agent-Images/Astra/Abil-2.png'
+              className='ability-image'
+              alt='ability 3'
+            />
+          </li>
+          <li>
+            <img
+              src='/images/Agent-Images/Astra/Abil-3.png'
+              className='ability-image'
+              alt='ability 4'
+            />
+          </li>
+        </ul>
+
+        <ul id='ability-container'>
+          <li>
+            <img
+              src='/images/Misc-Images/Spike.png'
+              className='ability-image'
+              alt='Spike'
+            />
+          </li>
+          <li>
+            <img
+              src='/images/Misc-Images/Ultimate-orb.png'
+              className='ability-image'
+              alt='Ultimate Orb'
+            />
+          </li>
+        </ul>
+        <button className='btn draw-btn border-btn'>Remove Border</button>
+      </div>
+
+      {/* <div id='agent-div'>
         <ul className='agent-container'>
           <li>
             <img
@@ -183,7 +238,7 @@ const Agents = () => {
           </li>
         </ul>
         <button className='btn draw-btn border-btn'>Remove Border</button>
-      </div>
+      </div> */}
     </div>
   );
 };

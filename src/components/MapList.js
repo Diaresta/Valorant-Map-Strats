@@ -1,6 +1,7 @@
 // import PropTypes from 'prop-types';
 
 import { useEffect, useState, useRef } from 'react';
+import MapButton from './MapButton';
 
 const MapList = (props) => {
   const canvasRef = useRef(null);
@@ -45,23 +46,27 @@ const MapList = (props) => {
     contextRef.current.stroke();
   };
 
+  const onClick = () => {
+    console.log('ree');
+  };
+
   return (
     <div id='map-list-container'>
       <ul id='map-list'>
         <li className='map-title'>
-          <button className='btn map-btn'>Ascent</button>
+          <MapButton text='Ascent' onClick={onClick} />
         </li>
         <li className='map-title'>
-          <button className='btn map-btn'>Bind</button>
+          <MapButton text='Bind' onClick={onClick} />
         </li>
         <li className='map-title'>
-          <button className='btn map-btn'>Haven</button>
+          <MapButton text='Haven' onClick={onClick} />
         </li>
         <li className='map-title'>
-          <button className='btn map-btn'>Icebox</button>
+          <MapButton text='Icebox' onClick={onClick} />
         </li>
         <li className='map-title'>
-          <button className='btn map-btn'>Split</button>
+          <MapButton text='Split' onClick={onClick} />
         </li>
       </ul>
 

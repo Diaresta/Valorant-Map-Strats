@@ -26,11 +26,16 @@
   border-top: 1px solid $text-color;
 }
 
-.agent-container {
-  display: flex;
-  list-style: none;
-  justify-content: center;
+#agent-div-2 {
+  width: 80%;
+  margin: auto !important;
 }
+
+// .agent-container {
+//   display: flex;
+//   list-style: none;
+//   justify-content: center;
+// }
 
 .agent-image {
   height: 50px;
