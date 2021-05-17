@@ -1,5 +1,4 @@
 // import PropTypes from 'prop-types';
-
 import { useEffect, useState, useRef } from 'react';
 import MapButton from './MapButton';
 
@@ -46,9 +45,19 @@ const MapList = (props) => {
     contextRef.current.stroke();
   };
 
-  const onClick = () => {
-    console.log('ree');
+  // const MapButtonRef = useRef(null);
+  // const map = MapButtonRef.current;
+  const mapImageRef = useRef(null);
+
+  const maps = {
+    ascent: '/images/Map-Images/Ascent-1.png',
+    bind: '/images/Map-Images/Bind-1.png',
+    haven: '/images/Map-Images/Haven-1.png',
+    icebox: '/images/Map-Images/Icebox-1.png',
+    split: '/images/Map-Images/Split-1.png',
   };
+
+  const onClick = () => {};
 
   return (
     <div id='map-list-container'>
@@ -101,9 +110,10 @@ const MapList = (props) => {
 
         <div id='map-container'>
           <img
-            src='/images/Map-Images/Ascent-1.png'
+            src={maps.ascent}
             id='map-img'
             alt='Map Placeholder'
+            ref={mapImageRef}
           />
           <canvas
             {...props}
