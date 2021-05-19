@@ -3,7 +3,10 @@ import { useEffect, useState, useRef } from 'react';
 const Canvas = () => {
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
+
   const [isDrawing, setIsDrawing] = useState(false);
+  const [color, setColor] = useState('white');
+  const [thickness, setThickness] = useState('3');
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -15,8 +18,8 @@ const Canvas = () => {
     const context = canvas.getContext('2d');
     context.scale(2, 2);
     context.lineCap = 'round';
-    context.strokeStyle = 'white';
-    context.lineWidth = 5;
+    // context.strokeStyle = 'white';
+    // context.lineWidth = 5;
 
     contextRef.current = context;
   }, []);
@@ -25,6 +28,14 @@ const Canvas = () => {
     const { offsetX, offsetY } = nativeEvent;
     contextRef.current.beginPath();
     contextRef.current.moveTo(offsetX, offsetY);
+
+    // Change Color
+    const canvas = canvasRef.current;
+    const context = canvas.getContext('2d');
+    context.strokeStyle = color;
+    context.lineWidth = thickness;
+    //
+
     setIsDrawing(true);
   };
 
@@ -43,23 +54,39 @@ const Canvas = () => {
     contextRef.current.stroke();
   };
 
+  // ---------- New Functions. Move/Refactor ---------- //
   // New clear draw function
   const clearDraw = () => {
-    console.log('reee');
     const canvas = canvasRef.current;
     const context = canvas.getContext('2d');
 
     context.clearRect(0, 0, 10000, 10000);
   };
 
+  // New change color draw function
+  const colorChange = () => {
+    setColor('red');
+  };
+
+  // New change line thickness function
+  const drawThickness = () => {
+    setThickness('7');
+  };
+  // -------------------------------------------------- //
+
   return (
-    <canvas
-      // {...props}
-      onMouseDown={startDraw}
-      onMouseUp={endDraw}
-      onMouseMove={draw}
-      ref={canvasRef}
-    />
+    <div>
+      <canvas
+        // {...props}
+        onMouseDown={startDraw}
+        onMouseUp={endDraw}
+        onMouseMove={draw}
+        ref={canvasRef}
+      />
+      <button onClick={clearDraw}>Clear</button>
+      <button onClick={colorChange}>Color</button>
+      <button onClick={drawThickness}>Thick</button>
+    </div>
   );
 };
 
