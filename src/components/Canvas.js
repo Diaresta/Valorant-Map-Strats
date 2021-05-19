@@ -43,6 +43,15 @@ const Canvas = () => {
     contextRef.current.stroke();
   };
 
+  // New clear draw function
+  const clearDraw = () => {
+    console.log('reee');
+    const canvas = canvasRef.current;
+    const context = canvas.getContext('2d');
+
+    context.clearRect(0, 0, 10000, 10000);
+  };
+
   return (
     <canvas
       // {...props}
