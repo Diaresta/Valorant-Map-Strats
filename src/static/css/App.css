@@ -179,6 +179,9 @@ body {
   flex-direction: column;
   justify-content: center;
   color: #f9f9f9;
+  position: absolute;
+  top: 10rem;
+  left: -6.5rem;
 }
 
 #drawing-tools button,

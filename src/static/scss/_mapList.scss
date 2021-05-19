@@ -49,6 +49,11 @@
   justify-content: center;
   color: $text-color;
 
+  // for drawing-tools in canvas.js
+  position: absolute;
+  top: 10rem;
+  left: -6.5rem;
+
   button,
   input {
     // margin: auto;

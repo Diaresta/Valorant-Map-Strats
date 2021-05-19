@@ -93,43 +93,23 @@ const MapList = (props) => {
       </ul>
 
       <div id='left-container'>
-        <div id='drawing-tools'>
+        {/* <div id='drawing-tools'>
           <i className='far fa-hand-pointer fa-3x dt-1' alt='Pointer' />
           <i className='fas fa-pencil-alt fa-3x dt-2' alt='Pencil' />
           <i className='fas fa-eraser fa-3x  dt-3' alt='Eraser' />
           <i className='fas fa-times fa-3x  dt-4' alt='Delete' />
           <button className='btn draw-btn'>Reset</button>
           <button className='btn draw-btn'>4px</button>
-          {/* <button className='btn draw-btn'>Color</button> */}
           <div id='color-container'>
             <input id='color' type='color' className='btn draw-btn' />
             <label id='color-label' htmlFor='color'>
               Color
             </label>
           </div>
-
-          {/* ^^ Pencil thickness above */}
-
-          {/* <div id='dropdown'>
-          <button id='dropdown-btn'>
-            <ul>
-              <li>2px</li>
-              <li>4px</li>
-              <li>6px</li>
-            </ul>
-          </button>
         </div> */}
-        </div>
 
         <div id='map-container'>
           <img src={map} id='map-img' alt='Map Placeholder' ref={mapImageRef} />
-          {/* <canvas
-            // {...props}
-            onMouseDown={startDraw}
-            onMouseUp={endDraw}
-            onMouseMove={draw}
-            ref={canvasRef}
-          /> */}
           <Canvas />
         </div>
       </div>

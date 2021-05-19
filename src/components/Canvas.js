@@ -76,6 +76,37 @@ const Canvas = () => {
 
   return (
     <div>
+      <div id='drawing-tools'>
+        <i className='far fa-hand-pointer fa-3x dt-1' alt='Pointer' />
+        <i
+          className='fas fa-pencil-alt fa-3x dt-2'
+          onClick={colorChange}
+          alt='Pencil'
+        />
+        <i
+          className='fas fa-eraser fa-3x  dt-3'
+          onClick={clearDraw}
+          alt='Eraser'
+        />
+        <i
+          className='fas fa-times fa-3x  dt-4'
+          onClick={clearDraw}
+          alt='Delete'
+        />
+        <button className='btn draw-btn' onClick={clearDraw}>
+          Reset
+        </button>
+        <button className='btn draw-btn' onClick={drawThickness}>
+          4px
+        </button>
+        <div id='color-container'>
+          <input id='color' type='color' className='btn draw-btn' />
+          <label id='color-label' onClick={colorChange} htmlFor='color'>
+            Color
+          </label>
+        </div>
+      </div>
+
       <canvas
         // {...props}
         onMouseDown={startDraw}
@@ -83,9 +114,6 @@ const Canvas = () => {
         onMouseMove={draw}
         ref={canvasRef}
       />
-      <button onClick={clearDraw}>Clear</button>
-      <button onClick={colorChange}>Color</button>
-      <button onClick={drawThickness}>Thick</button>
     </div>
   );
 };
