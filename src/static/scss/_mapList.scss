@@ -55,9 +55,11 @@
   left: -6.5rem;
 
   button,
-  input {
+  input,
+  i {
     // margin: auto;
     margin: 5px auto;
+    cursor: pointer;
   }
 
   .dt-2 {
@@ -150,3 +152,19 @@
   color: $text-color;
   transition: background-color 0.25s ease, color 0.25s ease;
 }
+
+// Move to Rect component
+// i::after {
+//   content: '';
+//   border-bottom: 4px solid $btn-color;
+//   width: 5px;
+//   display: block;
+//   align-items: center;
+//   // #ff4655
+// }
+
+// i:hover::after {
+//   border-bottom: 4px solid $hover-color;
+//   // #e30012
+// }
+// ----------------------

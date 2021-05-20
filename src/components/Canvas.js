@@ -6,7 +6,10 @@ const Canvas = () => {
 
   const [isDrawing, setIsDrawing] = useState(false);
   const [color, setColor] = useState('white');
-  const [thickness, setThickness] = useState('3');
+  const [thickness, setThickness] = useState(2);
+
+  // Add ::after styling for when i elements are clicked
+  const [btnStyle, setStyle] = useState('#ff4655');
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -34,7 +37,6 @@ const Canvas = () => {
     const context = canvas.getContext('2d');
     context.strokeStyle = color;
     context.lineWidth = thickness;
-    //
 
     setIsDrawing(true);
   };
@@ -48,14 +50,14 @@ const Canvas = () => {
     // can always change clause without negate
     if (!isDrawing) {
       return;
+    } else {
+      const { offsetX, offsetY } = nativeEvent;
+      contextRef.current.lineTo(offsetX, offsetY);
+      contextRef.current.stroke();
     }
-    const { offsetX, offsetY } = nativeEvent;
-    contextRef.current.lineTo(offsetX, offsetY);
-    contextRef.current.stroke();
   };
 
-  // ---------- New Functions. Move/Refactor ---------- //
-  // New clear draw function
+  // Resets canvas to blank
   const clearDraw = () => {
     const canvas = canvasRef.current;
     const context = canvas.getContext('2d');
@@ -63,29 +65,49 @@ const Canvas = () => {
     context.clearRect(0, 0, 10000, 10000);
   };
 
-  // New change color draw function
-  const colorChange = () => {
-    setColor('red');
+  const colorChange = (e) => {
+    setColor(e.target.value);
   };
 
-  // New change line thickness function
   const drawThickness = () => {
-    setThickness('7');
+    console.log({ thickness });
+    if (thickness === 10) {
+      setThickness(2);
+    } else {
+      setThickness(thickness + 2);
+    }
   };
-  // -------------------------------------------------- //
+
+  // Enables eraser
+  const eraserUse = () => {
+    const canvas = canvasRef.current;
+    const context = canvas.getContext('2d');
+    context.globalCompositeOperation = 'destination-out';
+  };
+
+  // Enables drawing
+  const drawUse = () => {
+    const canvas = canvasRef.current;
+    const context = canvas.getContext('2d');
+    context.globalCompositeOperation = 'source-over';
+  };
 
   return (
     <div>
       <div id='drawing-tools'>
-        <i className='far fa-hand-pointer fa-3x dt-1' alt='Pointer' />
+        <i
+          className='far fa-hand-pointer fa-3x dt-1'
+          alt='Pointer'
+          onClick={endDraw}
+        />
         <i
           className='fas fa-pencil-alt fa-3x dt-2'
-          onClick={colorChange}
           alt='Pencil'
+          onClick={drawUse}
         />
         <i
           className='fas fa-eraser fa-3x  dt-3'
-          onClick={clearDraw}
+          onClick={eraserUse}
           alt='Eraser'
         />
         <i
@@ -97,11 +119,16 @@ const Canvas = () => {
           Reset
         </button>
         <button className='btn draw-btn' onClick={drawThickness}>
-          4px
+          {thickness}px
         </button>
         <div id='color-container'>
-          <input id='color' type='color' className='btn draw-btn' />
-          <label id='color-label' onClick={colorChange} htmlFor='color'>
+          <input
+            id='color'
+            type='color'
+            className='btn draw-btn'
+            onChange={colorChange}
+          />
+          <label id='color-label' htmlFor='color'>
             Color
           </label>
         </div>

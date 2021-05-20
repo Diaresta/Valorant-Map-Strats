@@ -169,7 +169,9 @@ const Agents = () => {
       </div>
 
       <div id='agent-div-2'>
-        <AgentImage agentInfo={agentInfo} onClick={onClickAbility} />
+        <div id='agent-container'>
+          <AgentImage agentInfo={agentInfo} onClick={onClickAbility} />
+        </div>
 
         <div className='ability-container'>
           <Abilities

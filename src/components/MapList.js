@@ -4,48 +4,6 @@ import MapButton from './MapButton';
 import Canvas from './Canvas';
 
 const MapList = (props) => {
-  // const canvasRef = useRef(null);
-  // const contextRef = useRef(null);
-  // const [isDrawing, setIsDrawing] = useState(false);
-
-  // useEffect(() => {
-  //   const canvas = canvasRef.current;
-
-  //   // below for higher density screens?
-  //   canvas.width = canvas.offsetWidth * 2;
-  //   canvas.height = canvas.offsetHeight * 2;
-
-  //   const context = canvas.getContext('2d');
-  //   context.scale(2, 2);
-  //   context.lineCap = 'round';
-  //   context.strokeStyle = 'white';
-  //   context.lineWidth = 5;
-
-  //   contextRef.current = context;
-  // }, []);
-
-  // const startDraw = ({ nativeEvent }) => {
-  //   const { offsetX, offsetY } = nativeEvent;
-  //   contextRef.current.beginPath();
-  //   contextRef.current.moveTo(offsetX, offsetY);
-  //   setIsDrawing(true);
-  // };
-
-  // const endDraw = () => {
-  //   contextRef.current.closePath();
-  //   setIsDrawing(false);
-  // };
-
-  // const draw = ({ nativeEvent }) => {
-  //   // can always change clause without negate
-  //   if (!isDrawing) {
-  //     return;
-  //   }
-  //   const { offsetX, offsetY } = nativeEvent;
-  //   contextRef.current.lineTo(offsetX, offsetY);
-  //   contextRef.current.stroke();
-  // };
-
   const mapImageRef = useRef(null);
 
   const maps = {
@@ -93,21 +51,6 @@ const MapList = (props) => {
       </ul>
 
       <div id='left-container'>
-        {/* <div id='drawing-tools'>
-          <i className='far fa-hand-pointer fa-3x dt-1' alt='Pointer' />
-          <i className='fas fa-pencil-alt fa-3x dt-2' alt='Pencil' />
-          <i className='fas fa-eraser fa-3x  dt-3' alt='Eraser' />
-          <i className='fas fa-times fa-3x  dt-4' alt='Delete' />
-          <button className='btn draw-btn'>Reset</button>
-          <button className='btn draw-btn'>4px</button>
-          <div id='color-container'>
-            <input id='color' type='color' className='btn draw-btn' />
-            <label id='color-label' htmlFor='color'>
-              Color
-            </label>
-          </div>
-        </div> */}
-
         <div id='map-container'>
           <img src={map} id='map-img' alt='Map Placeholder' ref={mapImageRef} />
           <Canvas />

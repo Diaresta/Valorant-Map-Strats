@@ -46,15 +46,19 @@
   -ms-user-select: none;
 }
 
+#agent-div-2 {
+  margin: auto !important;
+}
+
+#agent-container {
+  padding: 0 3em 0 3em;
+}
+
 .ability-container {
   display: flex;
   list-style: none;
   justify-content: center;
   border-top: 1px solid #f9f9f9;
-}
-
-#agent-div-2 {
-  margin: auto !important;
 }
 
 .agent-image {
@@ -185,8 +189,10 @@ body {
 }
 
 #drawing-tools button,
-#drawing-tools input {
+#drawing-tools input,
+#drawing-tools i {
   margin: 5px auto;
+  cursor: pointer;
 }
 
 #drawing-tools .dt-2 {

@@ -19,16 +19,21 @@
   }
 }
 
+#agent-div-2 {
+  // width: 80%;
+  margin: auto !important;
+}
+
+#agent-container {
+  padding: 0 3em 0 3em;
+  // remove agent-container css and div to revert
+}
+
 .ability-container {
   display: flex;
   list-style: none;
   justify-content: center;
   border-top: 1px solid $text-color;
-}
-
-#agent-div-2 {
-  // width: 80%;
-  margin: auto !important;
 }
 
 // .agent-container {
