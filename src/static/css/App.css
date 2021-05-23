@@ -198,12 +198,24 @@ body {
   color: #e1b826;
 }
 
+#drawing-tools .dt-2:hover {
+  color: #c9a11e;
+}
+
 #drawing-tools .dt-3 {
   color: #f2aab2;
 }
 
+#drawing-tools .dt-3:hover {
+  color: #d99498;
+}
+
 #drawing-tools .dt-4 {
   color: red;
+}
+
+#drawing-tools .dt-4:hover {
+  color: #db000b;
 }
 
 #color-container {

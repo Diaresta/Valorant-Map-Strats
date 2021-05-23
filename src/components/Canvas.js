@@ -95,11 +95,11 @@ const Canvas = () => {
   return (
     <div>
       <div id='drawing-tools'>
-        <i
+        {/* <i
           className='far fa-hand-pointer fa-3x dt-1'
           alt='Pointer'
           onClick={endDraw}
-        />
+        /> */}
         <i
           className='fas fa-pencil-alt fa-3x dt-2'
           alt='Pencil'
@@ -115,9 +115,6 @@ const Canvas = () => {
           onClick={clearDraw}
           alt='Delete'
         />
-        <button className='btn draw-btn' onClick={clearDraw}>
-          Reset
-        </button>
         <button className='btn draw-btn' onClick={drawThickness}>
           {thickness}px
         </button>

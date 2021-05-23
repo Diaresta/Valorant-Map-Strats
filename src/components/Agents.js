@@ -4,13 +4,13 @@ import AgentImage from './AgentImage';
 import Abilities from './Abilities';
 
 const Agents = () => {
-  const [style, setStyle] = useState('green');
+  const [style, setStyle] = useState('#55ff46');
 
   const attackDefend = (e) => {
     if (e.target.innerHTML === 'Attack') {
-      setStyle('green');
+      setStyle('#55ff46');
     } else if (e.target.innerHTML === 'Defend') {
-      setStyle('red');
+      setStyle('#ff4655');
     } else if (e.target.innerHTML === 'Remove Border') {
       setStyle('transparent');
     }
