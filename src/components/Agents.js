@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Draggable from 'react-draggable';
 import AgentImage from './AgentImage';
 import Abilities from './Abilities';
 
@@ -183,18 +184,22 @@ const Agents = () => {
 
         <ul className='ability-container'>
           <li>
-            <img
-              src='/images/Misc-Images/Spike.png'
-              className='ability-image'
-              alt='Spike'
-            />
+            <Draggable>
+              <img
+                src='/images/Misc-Images/Spike.png'
+                className='ability-image'
+                alt='Spike'
+              />
+            </Draggable>
           </li>
           <li>
-            <img
-              src='/images/Misc-Images/Ultimate-orb.png'
-              className='ability-image'
-              alt='Ultimate Orb'
-            />
+            <Draggable>
+              <img
+                src='/images/Misc-Images/Ultimate-orb.png'
+                className='ability-image'
+                alt='Ultimate Orb'
+              />
+            </Draggable>
           </li>
         </ul>
         <button className='btn draw-btn border-btn'>Remove Border</button>
