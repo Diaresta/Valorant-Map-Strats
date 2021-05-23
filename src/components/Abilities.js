@@ -1,7 +1,7 @@
 import Draggable from 'react-draggable';
 import Agents from './Agents';
 
-const Abilities = ({ agentInfo, start }) => {
+const Abilities = ({ agentInfo, start, style }) => {
   return (
     <>
       {agentInfo.slice(start, start + 1).map((agent) => (
@@ -12,6 +12,7 @@ const Abilities = ({ agentInfo, start }) => {
               src={agent.abil_0}
               className='ability-image'
               alt='ability 0'
+              style={style}
             />
           </Draggable>
 
@@ -21,6 +22,7 @@ const Abilities = ({ agentInfo, start }) => {
               src={agent.abil_1}
               className='ability-image'
               alt='ability 1'
+              style={style}
             />
           </Draggable>
 
@@ -30,6 +32,7 @@ const Abilities = ({ agentInfo, start }) => {
               src={agent.abil_2}
               className='ability-image'
               alt='ability 2'
+              style={style}
             />
           </Draggable>
 
@@ -39,6 +42,7 @@ const Abilities = ({ agentInfo, start }) => {
               src={agent.abil_3}
               className='ability-image'
               alt='ability 3'
+              style={style}
             />
           </Draggable>
         </div>

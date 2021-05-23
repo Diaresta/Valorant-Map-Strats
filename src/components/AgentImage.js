@@ -1,6 +1,6 @@
 import Agent from './Agent';
 
-const AgentImage = ({ agentInfo, onClick }) => {
+const AgentImage = ({ agentInfo, onClick, style }) => {
   return (
     <>
       {agentInfo.map((agent) => (
@@ -9,6 +9,7 @@ const AgentImage = ({ agentInfo, onClick }) => {
           agent={agent}
           onClick={onClick}
           number={agent.number}
+          style={style}
         />
       ))}
     </>

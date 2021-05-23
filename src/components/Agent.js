@@ -1,6 +1,6 @@
 import Draggable from 'react-draggable';
 
-const Agent = ({ agent, onClick }) => {
+const Agent = ({ agent, onClick, style }) => {
   return (
     <Draggable>
       <img
@@ -10,6 +10,7 @@ const Agent = ({ agent, onClick }) => {
         alt={agent.number + ' ' + agent.name}
         onClick={onClick}
         number={agent.number}
+        style={style}
       />
     </Draggable>
   );

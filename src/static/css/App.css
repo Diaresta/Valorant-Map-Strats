@@ -62,18 +62,18 @@
 }
 
 .agent-image {
-  height: 50px;
-  width: 50px;
+  height: 45px;
+  width: 45px;
   border-radius: 50%;
-  border: 5px solid green;
+  border: 2px solid green;
   cursor: pointer;
 }
 
 .ability-image {
-  height: 50px;
-  width: 50px;
+  height: 45px;
+  width: 45px;
   border-radius: 50%;
-  border: 5px solid green;
+  border: 2px solid green;
   padding: 8px;
   cursor: pointer;
 }
