@@ -9,7 +9,8 @@ const Canvas = () => {
   const [thickness, setThickness] = useState(2);
 
   // Add ::after styling for when i elements are clicked
-  const [btnStyle, setStyle] = useState('#ff4655');
+  const [pencilStyle, setPencil] = useState('2px solid #ff4655');
+  const [eraserStyle, setEraser] = useState('none');
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -83,6 +84,7 @@ const Canvas = () => {
     const canvas = canvasRef.current;
     const context = canvas.getContext('2d');
     context.globalCompositeOperation = 'destination-out';
+    drawButtonStyle('none', '2px solid #ff4655');
   };
 
   // Enables drawing
@@ -90,6 +92,12 @@ const Canvas = () => {
     const canvas = canvasRef.current;
     const context = canvas.getContext('2d');
     context.globalCompositeOperation = 'source-over';
+    drawButtonStyle('2px solid #ff4655', 'none');
+  };
+
+  const drawButtonStyle = (pencil, eraser) => {
+    setPencil(pencil);
+    setEraser(eraser);
   };
 
   return (
@@ -104,11 +112,13 @@ const Canvas = () => {
           className='fas fa-pencil-alt fa-3x dt-2'
           alt='Pencil'
           onClick={drawUse}
+          style={{ borderBottom: pencilStyle }}
         />
         <i
           className='fas fa-eraser fa-3x  dt-3'
           onClick={eraserUse}
           alt='Eraser'
+          style={{ borderBottom: eraserStyle }}
         />
         <i
           className='fas fa-times fa-3x  dt-4'
