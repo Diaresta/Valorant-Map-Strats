@@ -175,23 +175,80 @@ const Agents = () => {
 
       <div id='agent-div-2'>
         <div id='agent-container'>
-          <AgentImage
-            agentInfo={agentInfo}
-            onClick={onClickAbility}
-            style={{ borderColor: style }}
-          />
+          <div>
+            <AgentImage
+              agentInfo={agentInfo}
+              onClick={onClickAbility}
+              style={{ borderColor: style }}
+            />
+          </div>
+          <div>
+            <AgentImage
+              agentInfo={agentInfo}
+              onClick={onClickAbility}
+              style={{ borderColor: style }}
+            />
+          </div>
+          <div>
+            <AgentImage
+              agentInfo={agentInfo}
+              onClick={onClickAbility}
+              style={{ borderColor: style }}
+            />
+          </div>
+          <div>
+            <AgentImage
+              agentInfo={agentInfo}
+              onClick={onClickAbility}
+              style={{ borderColor: style }}
+            />
+          </div>
         </div>
 
         <div className='ability-container'>
-          <Abilities
-            agentInfo={agentInfo}
-            src={agentInfo.name}
-            start={ability}
-            style={{ borderColor: style }}
-          />
+          <div>
+            <Abilities
+              agentInfo={agentInfo}
+              src={agentInfo.name}
+              start={ability}
+              style={{ borderColor: style }}
+            />
+          </div>
+          <div>
+            <Abilities
+              agentInfo={agentInfo}
+              src={agentInfo.name}
+              start={ability}
+              style={{ borderColor: style }}
+            />
+          </div>
+          <div>
+            <Abilities
+              agentInfo={agentInfo}
+              src={agentInfo.name}
+              start={ability}
+              style={{ borderColor: style }}
+            />
+          </div>
+          <div>
+            <Abilities
+              agentInfo={agentInfo}
+              src={agentInfo.name}
+              start={ability}
+              style={{ borderColor: style }}
+            />
+          </div>
+          <div>
+            <Abilities
+              agentInfo={agentInfo}
+              src={agentInfo.name}
+              start={ability}
+              style={{ borderColor: style }}
+            />
+          </div>
         </div>
 
-        <ul className='ability-container'>
+        <ul className='ability-container misc-container'>
           <li>
             <Draggable>
               <img

@@ -52,13 +52,28 @@
 
 #agent-container {
   padding: 0 3em 0 3em;
+  display: grid;
+}
+
+#agent-container div {
+  grid-column: 1;
+  grid-row: 1;
 }
 
 .ability-container {
-  display: flex;
+  display: grid;
   list-style: none;
   justify-content: center;
   border-top: 1px solid #f9f9f9;
+}
+
+.ability-container div {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.misc-container {
+  display: flex;
 }
 
 .agent-image {
