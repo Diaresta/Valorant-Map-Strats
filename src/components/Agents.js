@@ -4,19 +4,28 @@ import AgentImage from './AgentImage';
 import Abilities from './Abilities';
 
 const Agents = () => {
-  const [styleCT, setStyleCT] = useState('#55ff46');
-  const [styleT, setStyleT] = useState('#ff4655');
+  const [agentStyleCT, setAgentStyleCT] = useState('#55ff46');
+  const [agentStyleT, setAgentStyleT] = useState('#ff4655');
+  const [abilityStyleCT, setAbilityStyleCT] = useState('#55ff46');
+  const [abilityStyleT, setAbilityStyleT] = useState('#ff4655');
 
   const attackDefend = (e) => {
     if (e.target.innerHTML === 'Attack') {
-      setStyleCT('#55ff46');
-      setStyleT('#ff4655');
+      setAgentStyleCT('#55ff46');
+      setAgentStyleT('#ff4655');
+      setAbilityStyleCT('#55ff46');
+      setAbilityStyleT('#ff4655');
     } else if (e.target.innerHTML === 'Defend') {
-      setStyleCT('#ff4655');
-      setStyleT('#55ff46');
-    } else if (e.target.innerHTML === 'Remove Border') {
-      setStyleCT('transparent');
-      setStyleT('transparent');
+      setAgentStyleCT('#ff4655');
+      setAgentStyleT('#55ff46');
+      setAbilityStyleCT('#ff4655');
+      setAbilityStyleT('#55ff46 ');
+    } else if (e.target.innerHTML.includes('Agent')) {
+      setAgentStyleCT('transparent');
+      setAgentStyleT('transparent');
+    } else if (e.target.innerHTML.includes('Ability')) {
+      setAbilityStyleCT('transparent');
+      setAbilityStyleT('transparent');
     }
   };
 
@@ -183,21 +192,21 @@ const Agents = () => {
             <AgentImage
               agentInfo={agentInfo}
               onClick={onClickAbility}
-              style={{ borderColor: styleCT }}
+              style={{ borderColor: agentStyleCT }}
             />
           </div>
           <div>
             <AgentImage
               agentInfo={agentInfo}
               onClick={onClickAbility}
-              style={{ borderColor: styleT }}
+              style={{ borderColor: agentStyleT }}
             />
           </div>
           <div>
             <AgentImage
               agentInfo={agentInfo}
               onClick={onClickAbility}
-              style={{ borderColor: styleCT }}
+              style={{ borderColor: agentStyleCT }}
             />
           </div>
         </div>
@@ -208,7 +217,7 @@ const Agents = () => {
               agentInfo={agentInfo}
               src={agentInfo.name}
               start={ability}
-              style={{ borderColor: styleCT }}
+              style={{ borderColor: abilityStyleCT }}
             />
           </div>
           <div>
@@ -216,7 +225,7 @@ const Agents = () => {
               agentInfo={agentInfo}
               src={agentInfo.name}
               start={ability}
-              style={{ borderColor: styleT }}
+              style={{ borderColor: abilityStyleT }}
             />
           </div>
           <div>
@@ -224,7 +233,7 @@ const Agents = () => {
               agentInfo={agentInfo}
               src={agentInfo.name}
               start={ability}
-              style={{ borderColor: styleCT }}
+              style={{ borderColor: abilityStyleCT }}
             />
           </div>
           <div>
@@ -232,7 +241,7 @@ const Agents = () => {
               agentInfo={agentInfo}
               src={agentInfo.name}
               start={ability}
-              style={{ borderColor: styleT }}
+              style={{ borderColor: abilityStyleT }}
             />
           </div>
           <div>
@@ -240,7 +249,7 @@ const Agents = () => {
               agentInfo={agentInfo}
               src={agentInfo.name}
               start={ability}
-              style={{ borderColor: styleCT }}
+              style={{ borderColor: abilityStyleCT }}
             />
           </div>
           <div>
@@ -248,7 +257,7 @@ const Agents = () => {
               agentInfo={agentInfo}
               src={agentInfo.name}
               start={ability}
-              style={{ borderColor: styleT }}
+              style={{ borderColor: abilityStyleT }}
             />
           </div>
           <div>
@@ -256,7 +265,7 @@ const Agents = () => {
               agentInfo={agentInfo}
               src={agentInfo.name}
               start={ability}
-              style={{ borderColor: styleCT }}
+              style={{ borderColor: abilityStyleCT }}
             />
           </div>
           <div>
@@ -264,7 +273,7 @@ const Agents = () => {
               agentInfo={agentInfo}
               src={agentInfo.name}
               start={ability}
-              style={{ borderColor: styleT }}
+              style={{ borderColor: abilityStyleT }}
             />
           </div>
           <div>
@@ -272,7 +281,7 @@ const Agents = () => {
               agentInfo={agentInfo}
               src={agentInfo.name}
               start={ability}
-              style={{ borderColor: styleCT }}
+              style={{ borderColor: abilityStyleCT }}
             />
           </div>
         </div>
@@ -299,13 +308,22 @@ const Agents = () => {
             </Draggable>
           </li>
         </ul>
-        <button
-          className='btn draw-btn border-btn'
-          onClick={attackDefend}
-          style={{ borderColor: styleCT }}
-        >
-          Remove Border
-        </button>
+        <div id='button-container'>
+          <button
+            className='btn draw-btn border-btn'
+            onClick={attackDefend}
+            style={{ borderColor: agentStyleCT }}
+          >
+            Remove Agent Border
+          </button>
+          <button
+            className='btn draw-btn border-btn'
+            onClick={attackDefend}
+            style={{ borderColor: agentStyleCT }}
+          >
+            Remove Ability Border
+          </button>
+        </div>
       </div>
     </div>
   );

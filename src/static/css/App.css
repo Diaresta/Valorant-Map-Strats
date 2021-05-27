@@ -51,13 +51,19 @@
 }
 
 #agent-container {
-  padding: 0 3em 0 3em;
   display: grid;
+  padding: 0 3em 0 3em;
 }
 
 #agent-container div {
   grid-column: 1;
   grid-row: 1;
+}
+
+#button-container {
+  display: flex;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .ability-container {
@@ -189,6 +195,7 @@ body {
   list-style: none;
   display: flex;
   justify-content: center;
+  padding-left: 20rem;
 }
 
 #drawing-tools {

@@ -25,13 +25,20 @@
 }
 
 #agent-container {
-  padding: 0 3em 0 3em;
   display: grid;
+  padding: 0 3em 0 3em;
+
   div {
     grid-column: 1;
     grid-row: 1;
   }
   // remove agent-container css and div to revert
+}
+
+#button-container {
+  display: flex;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .ability-container {
