@@ -84,3 +84,18 @@
 .border-btn {
   width: 50% !important;
 }
+
+@media all and (max-width: 1130px) {
+  #agent-container {
+    padding: 0;
+  }
+}
+
+@media all and (max-width: 953px) {
+  .agent-image,
+  .ability-image {
+    width: 40px;
+    height: 40px;
+    border: 1px solid green;
+  }
+}
