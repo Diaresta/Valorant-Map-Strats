@@ -110,6 +110,16 @@
   }
 }
 
+// Color input border remove for Firefox
+#color::-moz-color-swatch {
+  border: none;
+}
+
+// Color input border remove for Chrome
+#color::-webkit-color-swatch {
+  border: none;
+}
+
 #color:hover {
   label {
     color: $text-color;

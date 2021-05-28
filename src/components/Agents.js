@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { stopImgDrag } from './Agent';
 import Draggable from 'react-draggable';
 import AgentImage from './AgentImage';
 import Abilities from './Abilities';
@@ -294,6 +295,7 @@ const Agents = () => {
                 className='ability-image'
                 alt='Spike'
                 style={{ borderColor: 'transparent' }}
+                onDragStart={stopImgDrag}
               />
             </Draggable>
           </li>
@@ -304,6 +306,7 @@ const Agents = () => {
                 className='ability-image'
                 alt='Ultimate Orb'
                 style={{ borderColor: 'transparent' }}
+                onDragStart={stopImgDrag}
               />
             </Draggable>
           </li>

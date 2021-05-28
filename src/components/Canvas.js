@@ -134,6 +134,8 @@ const Canvas = () => {
             type='color'
             className='btn draw-btn'
             onChange={colorChange}
+            // Value for Chrome/Firefox fix
+            value='#ff4655'
           />
           <label id='color-label' htmlFor='color'>
             Color

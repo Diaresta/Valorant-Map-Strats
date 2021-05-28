@@ -273,6 +273,14 @@ body {
   cursor: pointer;
 }
 
+#color::-moz-color-swatch {
+  border: none;
+}
+
+#color::-webkit-color-swatch {
+  border: none;
+}
+
 #color:hover label {
   color: #f9f9f9;
 }

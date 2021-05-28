@@ -1,5 +1,10 @@
 import Draggable from 'react-draggable';
 
+// Drag fix for Firefox
+export const stopImgDrag = (e) => {
+  e.preventDefault();
+};
+
 const Agent = ({ agent, onClick, style }) => {
   return (
     <Draggable>
@@ -11,6 +16,7 @@ const Agent = ({ agent, onClick, style }) => {
         onClick={onClick}
         number={agent.number}
         style={style}
+        onDragStart={stopImgDrag}
       />
     </Draggable>
   );

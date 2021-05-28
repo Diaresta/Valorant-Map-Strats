@@ -1,5 +1,6 @@
 import Draggable from 'react-draggable';
 import Agents from './Agents';
+import { stopImgDrag } from './Agent';
 
 const Abilities = ({ agentInfo, start, style }) => {
   return (
@@ -13,6 +14,7 @@ const Abilities = ({ agentInfo, start, style }) => {
               className='ability-image'
               alt='ability 0'
               style={style}
+              onDragStart={stopImgDrag}
             />
           </Draggable>
 
@@ -23,6 +25,7 @@ const Abilities = ({ agentInfo, start, style }) => {
               className='ability-image'
               alt='ability 1'
               style={style}
+              onDragStart={stopImgDrag}
             />
           </Draggable>
 
@@ -33,6 +36,7 @@ const Abilities = ({ agentInfo, start, style }) => {
               className='ability-image'
               alt='ability 2'
               style={style}
+              onDragStart={stopImgDrag}
             />
           </Draggable>
 
@@ -43,6 +47,7 @@ const Abilities = ({ agentInfo, start, style }) => {
               className='ability-image'
               alt='ability 3'
               style={style}
+              onDragStart={stopImgDrag}
             />
           </Draggable>
         </div>
