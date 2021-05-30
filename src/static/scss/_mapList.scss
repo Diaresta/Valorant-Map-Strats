@@ -108,6 +108,10 @@
     color: $text-color-blk;
     cursor: pointer;
   }
+
+  label:hover {
+    color: $text-color;
+  }
 }
 
 // Color input border remove for Firefox
@@ -118,12 +122,6 @@
 // Color input border remove for Chrome
 #color::-webkit-color-swatch {
   border: none;
-}
-
-#color:hover {
-  label {
-    color: $text-color;
-  }
 }
 
 .btn {

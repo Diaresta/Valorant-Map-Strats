@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const Header = ({ title, blurb }) => {
   return (
     <header>
       <div id='header-left'>
-        <a href='/'>
+        <Link to='/home'>
           <h1 alt='Title and Home Button'>{title}</h1>
-        </a>
+        </Link>
         <h3>{blurb}</h3>
       </div>
       <div id='header-right'>

@@ -273,16 +273,16 @@ body {
   cursor: pointer;
 }
 
+#color-container label:hover {
+  color: #f9f9f9;
+}
+
 #color::-moz-color-swatch {
   border: none;
 }
 
 #color::-webkit-color-swatch {
   border: none;
-}
-
-#color:hover label {
-  color: #f9f9f9;
 }
 
 .btn {
@@ -336,4 +336,36 @@ body {
   background-color: #e30012;
   color: #f9f9f9;
   transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+#error {
+  margin: 5rem auto auto auto;
+  padding: 4rem;
+  width: 50%;
+  border: 1px solid #f9f9f9;
+  background-color: #292929;
+}
+
+#error img {
+  height: 10%;
+  width: 10%;
+  margin-top: -5rem;
+  color: #f9f9f9;
+}
+
+#error h1 {
+  color: #ff4655;
+  margin-bottom: 1rem;
+}
+
+#error h2 {
+  color: #f9f9f9;
+}
+
+#error button {
+  margin: 2rem;
+}
+
+#error-text {
+  color: #ff4655;
 }

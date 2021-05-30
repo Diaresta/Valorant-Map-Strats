@@ -1,0 +1,38 @@
+@import 'config';
+
+#error {
+  //   position: absolute;
+  //   top: 50%;
+  //   -ms-transform: translateY(-50%);
+  //   transform: translateY(-50%);
+
+  margin: 5rem auto auto auto;
+  padding: 4rem;
+  width: 50%;
+  border: 1px solid $text-color;
+  background-color: #292929;
+
+  img {
+    height: 10%;
+    width: 10%;
+    margin-top: -5rem;
+    color: $text-color;
+  }
+
+  h1 {
+    color: $btn-color;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    color: $text-color;
+  }
+
+  button {
+    margin: 2rem;
+  }
+}
+
+#error-text {
+  color: $btn-color;
+}
