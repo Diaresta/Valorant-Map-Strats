@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 const ErrorPage = () => {
   return (
     <div id='error'>
-      <img src='/images/Misc-Images/error-logo.png' />
+      <img src='/images/Misc-Images/error-logo.png' alt='error' />
       <h1>Connection Error</h1>
       <h2>
         <span style={{ color: '#ff4655' }}>Vandal</span> has encountered a

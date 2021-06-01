@@ -169,11 +169,24 @@ const Agents = () => {
   ]);
 
   const [ability, setAbility] = useState(agentInfo[0].number);
+  const [abilityUse, setAbilityUse] = useState(false);
 
   const onClickAbility = (e) => {
     let number = e.target.alt.split(' ');
     console.log(number[0]);
+
     setAbility(agentInfo[number[0]].number);
+
+    // if (abilityUse === true) {
+    // /* -- if boolean isn't set to true, let ability change when agent is clicked
+    // }
+  };
+
+  // /* -- set INDIVIDUAL img booleans to true/false
+  const abilityDragBool = (e) => {
+    setAbilityUse(true);
+    console.log(e.target.abilityUse);
+    console.log('asd');
   };
 
   return (
@@ -219,6 +232,8 @@ const Agents = () => {
               src={agentInfo.name}
               start={ability}
               style={{ borderColor: abilityStyleCT }}
+              abilityUse={abilityUse}
+              onClick={abilityDragBool}
             />
           </div>
           <div>
@@ -227,6 +242,8 @@ const Agents = () => {
               src={agentInfo.name}
               start={ability}
               style={{ borderColor: abilityStyleT }}
+              abilityUse={abilityUse}
+              onClick={abilityDragBool}
             />
           </div>
           <div>
@@ -235,6 +252,8 @@ const Agents = () => {
               src={agentInfo.name}
               start={ability}
               style={{ borderColor: abilityStyleCT }}
+              abilityUse={abilityUse}
+              onClick={abilityDragBool}
             />
           </div>
           <div>
@@ -243,6 +262,8 @@ const Agents = () => {
               src={agentInfo.name}
               start={ability}
               style={{ borderColor: abilityStyleT }}
+              abilityUse={abilityUse}
+              onClick={abilityDragBool}
             />
           </div>
           <div>
@@ -251,6 +272,8 @@ const Agents = () => {
               src={agentInfo.name}
               start={ability}
               style={{ borderColor: abilityStyleCT }}
+              abilityUse={abilityUse}
+              onClick={abilityDragBool}
             />
           </div>
           <div>
@@ -259,6 +282,8 @@ const Agents = () => {
               src={agentInfo.name}
               start={ability}
               style={{ borderColor: abilityStyleT }}
+              abilityUse={abilityUse}
+              onClick={abilityDragBool}
             />
           </div>
           <div>
@@ -267,6 +292,8 @@ const Agents = () => {
               src={agentInfo.name}
               start={ability}
               style={{ borderColor: abilityStyleCT }}
+              abilityUse={abilityUse}
+              onClick={abilityDragBool}
             />
           </div>
           <div>
@@ -275,6 +302,8 @@ const Agents = () => {
               src={agentInfo.name}
               start={ability}
               style={{ borderColor: abilityStyleT }}
+              abilityUse={abilityUse}
+              onClick={abilityDragBool}
             />
           </div>
           <div>
@@ -283,6 +312,8 @@ const Agents = () => {
               src={agentInfo.name}
               start={ability}
               style={{ borderColor: abilityStyleCT }}
+              abilityUse={abilityUse}
+              onClick={abilityDragBool}
             />
           </div>
         </div>
