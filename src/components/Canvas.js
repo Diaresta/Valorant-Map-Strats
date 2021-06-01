@@ -103,11 +103,6 @@ const Canvas = () => {
   return (
     <div>
       <div id='drawing-tools'>
-        {/* <i
-          className='far fa-hand-pointer fa-3x dt-1'
-          alt='Pointer'
-          onClick={endDraw}
-        /> */}
         <i
           className='fas fa-pencil-alt fa-3x dt-2'
           alt='Pencil'
@@ -115,13 +110,13 @@ const Canvas = () => {
           style={{ borderBottom: pencilStyle }}
         />
         <i
-          className='fas fa-eraser fa-3x  dt-3'
+          className='fas fa-eraser fa-3x dt-3'
           onClick={eraserUse}
           alt='Eraser'
           style={{ borderBottom: eraserStyle }}
         />
         <i
-          className='fas fa-times fa-3x  dt-4'
+          className='fas fa-times fa-3x dt-4'
           onClick={clearDraw}
           alt='Delete'
         />
