@@ -6,17 +6,17 @@ import ErrorPage from './components/ErrorPage';
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <div className='App'>
-          <Header />
-          <Route path={['', '/', '/home']} exact={true}>
+    <div className='App'>
+      <Router>
+        <Header />
+        <Switch>
+          <Route path={['', '/', '/home']} exact>
             <SiteCompile />
           </Route>
-          <Route path='*' component={ErrorPage} />
-        </div>
-      </Switch>
-    </Router>
+          <Route path='*' component={ErrorPage} exact />
+        </Switch>
+      </Router>
+    </div>
   );
 }
 
