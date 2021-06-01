@@ -2,7 +2,7 @@ import Draggable from 'react-draggable';
 import Agents from './Agents';
 import { stopImgDrag } from './Agent';
 
-const Abilities = ({ agentInfo, start, style, onClick }) => {
+const Abilities = ({ agentInfo, start, style }) => {
   return (
     <>
       {agentInfo.slice(start, start + 1).map((agent) => (
@@ -15,7 +15,6 @@ const Abilities = ({ agentInfo, start, style, onClick }) => {
               alt='ability 0'
               style={style}
               onDragStart={stopImgDrag}
-              onClick={onClick}
             />
           </Draggable>
 
@@ -27,7 +26,6 @@ const Abilities = ({ agentInfo, start, style, onClick }) => {
               alt='ability 1'
               style={style}
               onDragStart={stopImgDrag}
-              onClick={onClick}
             />
           </Draggable>
 
@@ -39,7 +37,6 @@ const Abilities = ({ agentInfo, start, style, onClick }) => {
               alt='ability 2'
               style={style}
               onDragStart={stopImgDrag}
-              onClick={onClick}
             />
           </Draggable>
 
@@ -51,7 +48,6 @@ const Abilities = ({ agentInfo, start, style, onClick }) => {
               alt='ability 3'
               style={style}
               onDragStart={stopImgDrag}
-              onClick={onClick}
             />
           </Draggable>
         </div>
