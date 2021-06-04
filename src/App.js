@@ -10,7 +10,6 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   const apiCall = async () => {
-    // const url = await 'https://api.github.com/users';
     const url = await 'https://pokeapi.co/api/v2/pokemon';
 
     const response = await fetch(url);
