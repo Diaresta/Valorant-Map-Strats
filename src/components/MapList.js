@@ -1,11 +1,9 @@
 // import PropTypes from 'prop-types';
-import { useEffect, useState, useRef } from 'react';
+import { useState } from 'react';
 import MapButton from './MapButton';
 import Canvas from './Canvas';
 
 const MapList = (props) => {
-  const mapImageRef = useRef(null);
-
   const maps = {
     ascent: '/images/Map-Images/Ascent-1.png',
     bind: '/images/Map-Images/Bind-1.png',
@@ -52,7 +50,7 @@ const MapList = (props) => {
 
       <div id='left-container'>
         <div id='map-container'>
-          <img src={map} id='map-img' alt='Map Placeholder' ref={mapImageRef} />
+          <img src={map} id='map-img' alt='Map Placeholder' />
           <Canvas />
         </div>
       </div>

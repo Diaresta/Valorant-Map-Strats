@@ -12,11 +12,11 @@ function App() {
   const apiCall = async () => {
     const url = await 'https://pokeapi.co/api/v2/pokemon';
 
+    // bottleneck npm for api calls/time
     const response = await fetch(url);
     const data = await response.json();
     setApiData(data.results);
     setLoading(false);
-    console.log(data.results);
   };
 
   useEffect(() => {

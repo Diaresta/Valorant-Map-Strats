@@ -1,5 +1,4 @@
 import Draggable from 'react-draggable';
-import Agents from './Agents';
 import { stopImgDrag } from './Agent';
 
 const Abilities = ({ agentInfo, start, style }) => {

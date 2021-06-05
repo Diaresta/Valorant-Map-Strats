@@ -1,4 +1,3 @@
-import Header from './Header';
 import MapList from './MapList';
 import Agents from './Agents';
 

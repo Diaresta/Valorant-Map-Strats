@@ -30,7 +30,7 @@ const Agents = () => {
     }
   };
 
-  const [agentInfo, setAgent] = useState([
+  const [agentInfo] = useState([
     {
       number: 0,
       name: 'Astra',
