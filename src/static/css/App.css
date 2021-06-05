@@ -27,10 +27,6 @@
   width: 30%;
 }
 
-.fa-smile {
-  padding-bottom: 3rem;
-}
-
 #agent-skill-container {
   display: flex;
   flex-direction: column;
@@ -372,4 +368,18 @@ body {
 
 #error-text {
   color: #ff4655;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+#loading-text {
+  animation: blinker 1s linear infinite;
+}
+
+.fa-smile {
+  padding-bottom: 3rem;
 }

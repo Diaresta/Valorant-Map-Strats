@@ -1,0 +1,15 @@
+@import 'config';
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+#loading-text {
+  animation: blinker 1s linear infinite;
+}
+
+.fa-smile {
+  padding-bottom: 3rem;
+}

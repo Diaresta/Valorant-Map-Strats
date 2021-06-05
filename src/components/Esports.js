@@ -2,7 +2,9 @@ import { Link } from 'react-router-dom';
 
 const Esports = ({ apiData, loading }) => {
   return loading ? (
-    <h1 style={{ color: 'white' }}>Loading...</h1>
+    <h1 id='loading-text' style={{ color: 'white' }}>
+      Loading...
+    </h1>
   ) : (
     <div style={{ color: 'white' }}>
       <h1>
