@@ -6,6 +6,8 @@
 
 _**Vandal**_ is a tool to assist players in planning out strategies for their Valorant matches. With the ability to draw, and place Agents along with their skills onto your favorite map, Vandal strives to give players freedom in expressing and bringing their ideas to life in a fun and dynamic way.
 
+![Site example](/src/static/images/readme-ex.png)
+
 ## How to Contribute
 
 If you'd like to contribute to _**Vandal**_, do the following:
