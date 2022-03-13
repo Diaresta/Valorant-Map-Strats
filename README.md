@@ -6,7 +6,7 @@
 
 _**Vandal**_ is a tool to assist players in planning out strategies for their _Valorant_ matches. With the ability to draw, and place Agents along with their skills onto your favorite map, **_Vandal_** strives to give players freedom in expressing and bringing their ideas to life in a fun and dynamic way.
 
-![Site example](/src/static/images/readme-ex.png)
+![Site example](/src/static/images/readme-ex.jpg)
 
 ## How to Contribute
 
