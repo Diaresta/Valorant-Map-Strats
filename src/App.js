@@ -9,6 +9,7 @@ function App() {
   const [apiData, setApiData] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  // apiCall for future esports portal
   const apiCall = async () => {
     const url = await 'https://pokeapi.co/api/v2/pokemon';
 
