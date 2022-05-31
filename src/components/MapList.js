@@ -3,7 +3,7 @@ import { useState } from 'react';
 import MapButton from './MapButton';
 import Canvas from './Canvas';
 
-const MapList = (props) => {
+const MapList = () => {
   const maps = {
     ascent: '/images/Map-Images/Ascent-1.png',
     bind: '/images/Map-Images/Bind-1.png',

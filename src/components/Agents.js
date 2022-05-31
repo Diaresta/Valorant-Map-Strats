@@ -172,13 +172,8 @@ const Agents = () => {
 
   const onClickAbility = (e) => {
     let number = e.target.alt.split(' ');
-    console.log(number[0]);
 
     setAbility(agentInfo[number[0]].number);
-
-    // if (abilityUse === true) {
-    // /* -- if boolean isn't set to true, let ability change when agent is clicked
-    // }
   };
 
   return (

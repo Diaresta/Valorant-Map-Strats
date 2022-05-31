@@ -71,7 +71,6 @@ const Canvas = () => {
   };
 
   const drawThickness = () => {
-    console.log({ thickness });
     if (thickness === 10) {
       setThickness(2);
     } else {
@@ -139,7 +138,6 @@ const Canvas = () => {
       </div>
 
       <canvas
-        // {...props}
         onMouseDown={startDraw}
         onMouseUp={endDraw}
         onMouseMove={draw}
